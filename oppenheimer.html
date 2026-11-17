@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اوپنهایمر | CineWorld</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .op-hero {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 55px 7%;
+            background: linear-gradient(135deg, #191923, #0b0b0f);
+        }
+
+        .op-poster {
+            width: 270px;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px #000;
+        }
+
+        .op-hero-info {
+            flex: 1;
+        }
+
+        .op-hero-info h1 {
+            color: #ff4040;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .op-hero-info p {
+            color: #ccc;
+            line-height: 2;
+        }
+
+        .op-tag {
+            display: inline-block;
+            background: #292932;
+            color: #ffce45;
+            padding: 7px 12px;
+            border-radius: 7px;
+            margin: 5px 3px;
+            font-size: 13px;
+        }
+
+        .op-content {
+            padding: 30px 7% 60px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .op-section {
+            margin: 35px 0;
+        }
+
+        .op-section h2 {
+            color: #ff4040;
+            border-right: 4px solid #ff3030;
+            padding-right: 12px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .op-section h3 {
+            color: #eee;
+            margin: 20px 0 10px;
+        }
+
+        .op-section p {
+            color: #ccc;
+            line-height: 2.3;
+            margin-bottom: 13px;
+        }
+
+        .op-panel {
+            background: #17171f;
+            padding: 22px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .op-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .op-fact {
+            background: #20202a;
+            padding: 15px;
+            border-radius: 9px;
+            color: #ddd;
+            line-height: 1.9;
+        }
+
+        .op-fact strong {
+            color: #ff6464;
+        }
+
+        .op-ratings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+
+        .op-rating-card {
+            background: #17171f;
+            border: 1px solid #292932;
+            border-radius: 12px;
+            text-align: center;
+            padding: 22px 10px;
+        }
+
+        .op-rating-card strong {
+            display: block;
+            color: #5bd68b;
+            font-size: 30px;
+            margin: 12px 0;
+        }
+
+        .op-rating-card span {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .op-cast {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 12px;
+        }
+
+        .op-cast-card {
+            background: #17171f;
+            padding: 18px;
+            border-radius: 10px;
+            border-bottom: 2px solid #ff3030;
+        }
+
+        .op-cast-card strong {
+            color: white;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .op-cast-card span {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .op-list {
+            background: #17171f;
+            padding: 20px 40px;
+            border-radius: 12px;
+            color: #ccc;
+            line-height: 2.5;
+        }
+
+        .op-pros {
+            border-right: 4px solid #5bd68b;
+        }
+
+        .op-cons {
+            border-right: 4px solid #ff9c52;
+        }
+
+        .op-award {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            background: #17171f;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 9px;
+            color: #ddd;
+        }.op-award span {
+            color: #ffce45;
+            text-align: left;
+        }
+
+        .op-sources a {
+            display: inline-block;
+            color: #ff6666;
+            text-decoration: none;
+            margin: 8px 12px;
+        }
+
+        .op-sources a:hover {
+            color: white;
+        }
+
+        .op-verdict {
+            background: linear-gradient(135deg, #242430, #17171f);
+            border: 1px solid #343442;
+            padding: 25px;
+            border-radius: 14px;
+        }
+
+        .op-verdict h3 {
+            color: #ffce45;
+        }
+
+        @media(max-width: 700px) {
+            .op-hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 35px 20px;
+            }
+
+            .op-poster {
+                width: 220px;
+            }
+
+            .op-hero-info h1 {
+                font-size: 27px;
+            }
+
+            .op-content {
+                padding: 25px 5%;
+            }
+
+            .op-award {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- نوار بالای سایت -->
+<header>
+    <div class="logo">CineWorld</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#movies">فیلم‌ها</a>
+        <a href="index.html#series">سریال‌ها</a>
+    </nav>
+</header>
+
+<!-- معرفی اصلی فیلم -->
+<section class="op-hero">
+
+    <img
+        class="op-poster"
+        src="https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg"
+        alt="پوستر فیلم اوپنهایمر"
+    >
+
+    <div class="op-hero-info">
+
+        <h1>اوپنهایمر | Oppenheimer</h1>
+
+        <p>
+            اثری از کریستوفر نولان درباره زندگی یکی از مهم‌ترین
+            و بحث‌برانگیزترین دانشمندان قرن بیستم.
+        </p>
+
+        <div>
+            <span class="op-tag">۲۰۲۳</span>
+            <span class="op-tag">۱۸۰ دقیقه</span>
+            <span class="op-tag">زندگی‌نامه‌ای</span>
+            <span class="op-tag">تاریخی</span>
+            <span class="op-tag">درام</span>
+        </div>
+
+        <p>
+            <strong>کارگردان:</strong> کریستوفر نولان
+            <br>
+            <strong>بازیگر اصلی:</strong> کیلین مورفی
+            <br>
+            <strong>کشور سازنده:</strong> آمریکا و بریتانیا
+            <br>
+            <strong>تاریخ اکران:</strong> ۲۱ ژوئیه ۲۰۲۳
+            <br>
+            <strong>شعار فیلم:</strong> The World Forever Changes
+        </p>
+
+    </div>
+</section>
+
+<main class="op-content">
+
+    <!-- امتیازها -->
+    <section class="op-section">
+        <h2>امتیازها و محبوبیت فیلم</h2>
+
+        <div class="op-ratings">
+
+            <div class="op-rating-card">
+                <span>⭐️ IMDb</span>
+                <strong>8.2/10</strong>
+                <span>بیش از ۱.۱ میلیون رأی</span>
+            </div>
+
+            <div class="op-rating-card">
+                <span>🍅 Rotten Tomatoes</span>
+                <strong>93%</strong>
+                <span>امتیاز منتقدان</span>
+            </div>
+
+            <div class="op-rating-card">
+                <span>🍿 Rotten Tomatoes</span>
+                <strong>91%</strong>
+                <span>امتیاز تماشاگران</span>
+            </div>
+
+            <div class="op-rating-card">
+                <span>🎯 Metacritic</span>
+                <strong>90/100</strong>
+                <span>امتیاز منتقدان</span>
+            </div>
+
+            <div class="op-rating-card">
+                <span>👥 Metacritic</span>
+                <strong>8.4/10</strong>
+                <span>امتیاز کاربران</span>
+            </div>
+
+        </div>
+
+        <p>
+            امتیازها ممکن است با ثبت رأی‌های جدید تغییر کنند.
+        </p>
+    </section>
+
+    <!-- داستان -->
+    <section class="op-section">
+        <h2>داستان فیلم</h2>
+
+        <div class="op-panel">
+            <p>
+                فیلم اوپنهایمر روایت زندگی جی. رابرت اوپنهایمر،
+                فیزیک‌دان نظری آمریکایی و یکی از چهره‌های مهم
+                تاریخ علم است.
+            </p>
+            <p>
+                داستان در دوران جنگ جهانی دوم جریان دارد؛ زمانی که
+                اوپنهایمر مسئولیت علمی یک پروژه محرمانه و بسیار مهم
+                را بر عهده می‌گیرد.
+            </p>
+
+            <p>
+                فیلم در کنار فعالیت‌های علمی او، به روابط شخصی،
+                رقابت‌های علمی، فشارهای سیاسی، تصمیم‌های دشوار
+                و پیامدهای اخلاقی فعالیت‌هایش می‌پردازد.
+            </p>
+
+            <p>
+                این اثر فقط درباره علم نیست؛ بلکه درباره قدرت دانش،
+                مسئولیت انسان و تأثیر تصمیم‌های بزرگ بر آینده جهان است.
+            </p>
+
+            <p>
+                <strong>توجه:</strong>
+                این معرفی هیچ‌کدام از اتفاقات مهم و پایان فیلم را فاش نمی‌کند.
+            </p>
+        </div>
+    </section>
+
+    <!-- اطلاعات اصلی -->
+    <section class="op-section">
+        <h2>اطلاعات اصلی فیلم</h2>
+
+        <div class="op-facts">
+
+            <div class="op-fact">
+                <strong>نام اصلی:</strong> Oppenheimer
+            </div>
+
+            <div class="op-fact">
+                <strong>نام فارسی:</strong> اوپنهایمر
+            </div>
+
+            <div class="op-fact">
+                <strong>سال انتشار:</strong> ۲۰۲۳
+            </div>
+
+            <div class="op-fact">
+                <strong>مدت زمان:</strong> ۱۸۰ دقیقه
+            </div>
+
+            <div class="op-fact">
+                <strong>کارگردان:</strong> کریستوفر نولان
+            </div>
+
+            <div class="op-fact">
+                <strong>نویسنده فیلمنامه:</strong> کریستوفر نولان
+            </div>
+
+            <div class="op-fact">
+                <strong>کشور سازنده:</strong> آمریکا و بریتانیا
+            </div>
+
+            <div class="op-fact">
+                <strong>زبان اصلی:</strong> انگلیسی
+            </div>
+
+            <div class="op-fact">
+                <strong>شرکت توزیع:</strong> Universal Pictures
+            </div>
+
+            <div class="op-fact">
+                <strong>آهنگساز:</strong> لودویگ گورانسون
+            </div>
+
+            <div class="op-fact">
+                <strong>فیلم‌بردار:</strong> هویته ون هویتما
+            </div>
+
+            <div class="op-fact">
+                <strong>تدوین‌گر:</strong> جنیفر لیم
+            </div>
+
+            <div class="op-fact">
+                <strong>منبع اقتباس:</strong> کتاب American Prometheus
+            </div>
+
+            <div class="op-fact">
+                <strong>بودجه تولید:</strong> حدود ۱۰۰ میلیون دلار
+            </div>
+
+            <div class="op-fact">
+                <strong>فروش جهانی:</strong> حدود ۹۷۶ میلیون دلار
+            </div>
+
+            <div class="op-fact">
+                <strong>رده‌بندی آمریکا:</strong> R
+            </div>
+
+        </div>
+    </section>
+
+    <!-- بازیگران -->
+    <section class="op-section">
+        <h2>بازیگران و شخصیت‌ها</h2>
+
+        <div class="op-cast">
+
+            <div class="op-cast-card">
+                <strong>Cillian Murphy</strong>
+                <span>جی. رابرت اوپنهایمر</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Emily Blunt</strong>
+                <span>کیتی اوپنهایمر</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Robert Downey Jr.</strong>
+                <span>لوئیس استراوس</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Matt Damon</strong>
+                <span>ژنرال لزلی گرووز</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Florence Pugh</strong>
+                <span>جین تاتلاک</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Josh Hartnett</strong>
+                <span>ارنست لارنس</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Rami Malek</strong>
+                <span>دیوید هیل</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Kenneth Branagh</strong>
+                <span>نیلز بور</span>
+            </div>
+            <div class="op-cast-card">
+                <strong>Benny Safdie</strong>
+                <span>ادوارد تلر</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>David Krumholtz</strong>
+                <span>ایزیدور ربی</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Tom Conti</strong>
+                <span>آلبرت اینشتین</span>
+            </div>
+
+            <div class="op-cast-card">
+                <strong>Dane DeHaan</strong>
+                <span>کنت نیکولز</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- پشت صحنه -->
+    <section class="op-section">
+        <h2>پشت صحنه و نحوه تولید</h2>
+
+        <div class="op-panel">
+
+            <h3>🎥 فیلم‌برداری</h3>
+
+            <p>
+                هویته ون هویتما مسئول فیلم‌برداری این اثر بوده است.
+                در تولید فیلم از دوربین‌های IMAX 65mm و فیلم
+                65 میلی‌متری استفاده شده است.
+            </p>
+
+            <h3>🎞️ تصاویر رنگی و سیاه‌وسفید</h3>
+
+            <p>
+                یکی از ویژگی‌های بصری فیلم، ترکیب تصاویر رنگی
+                و سیاه‌وسفید است که به روایت و تفکیک بخش‌های مختلف
+                داستان کمک می‌کند.
+            </p>
+
+            <h3>🎬 جلوه‌های ویژه</h3>
+
+            <p>
+                تیم تولید برای خلق تصاویر سینمایی از روش‌های
+                تصویربرداری عملی و جلوه‌های بصری استفاده کرده است.
+                نولان به ساخت تجربه‌ای واقع‌گرایانه و سینمایی
+                توجه ویژه‌ای داشته است.
+            </p>
+
+            <h3>🎼 موسیقی متن</h3>
+
+            <p>
+                موسیقی ساخته لودویگ گورانسون یکی از مهم‌ترین
+                بخش‌های فیلم است و در ایجاد تنش، هیجان و فضای
+                احساسی نقش زیادی دارد.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- نقد و بررسی -->
+    <section class="op-section">
+        <h2>نقد و بررسی تخصصی</h2>
+
+        <div class="op-panel">
+
+            <h3>🎭 بازیگری</h3>
+
+            <p>
+                کیلین مورفی در نقش اصلی اجرای بسیار قدرتمندی دارد.
+                او با استفاده از حالات چهره، نگاه و بازی کنترل‌شده،
+                پیچیدگی شخصیت اوپنهایمر را به تصویر می‌کشد.
+            </p>
+
+            <p>
+                رابرت داونی جونیور و امیلی بلانت نیز از دیگر
+                بازیگران برجسته این اثر هستند.
+            </p>
+
+            <h3>🎬 کارگردانی و فیلمنامه</h3>
+
+            <p>
+                کریستوفر نولان داستانی تاریخی را با روایتی چندلایه
+                و غیرخطی به تصویر کشیده است.
+                فیلم علاوه بر وقایع علمی، به مسائل سیاسی،
+                شخصی و اخلاقی نیز توجه دارد.
+            </p>
+
+            <h3>🎵 موسیقی و صداگذاری</h3>
+
+            <p>
+                موسیقی لودویگ گورانسون با فضای فیلم هماهنگی زیادی دارد.
+                طراحی صدا نیز به ایجاد حس تنش و اهمیت اتفاقات کمک می‌کند.
+            </p>
+
+            <h3>📷 تصویربرداری</h3>
+
+            <p>
+                قاب‌بندی‌های دقیق، تصاویر IMAX و ترکیب رنگ و
+                سیاه‌وسفید از ویژگی‌های مهم تصویربرداری فیلم هستند.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- نظرات مخاطبان -->
+    <section class="op-section">
+        <h2>نظر تماشاگران</h2>
+
+        <div class="op-panel">
+
+            <h3>نقاطی که مخاطبان تحسین کرده‌اند</h3>
+
+            <ul class="op-list">
+                <li>بازی تأثیرگذار کیلین مورفی</li>
+                <li>کارگردانی حرفه‌ای کریستوفر نولان</li>
+                <li>موسیقی متن و طراحی صدا</li>
+                <li>تصویربرداری سینمایی و کیفیت IMAX</li>
+                <li>موضوع تاریخی و مفاهیم اخلاقی فیلم</li>
+            </ul>
+
+            <h3>انتقادهایی که بعضی مخاطبان مطرح کرده‌اند</h3>
+
+            <ul class="op-list">
+                <li>مدت زمان سه‌ساعته فیلم</li>
+                <li>تعداد زیاد شخصیت‌های تاریخی</li>
+                <li>گفت‌وگوهای فراوان در بعضی قسمت‌ها</li>
+                <li>روایت غیرخطی و نیاز به تمرکز بالا</li>
+                <li>ریتم آرام بعضی بخش‌ها</li>
+            </ul>
+            <p>
+                این بخش خلاصه‌ای از بازخوردهای عمومی مخاطبان است
+                و نقل‌قول مستقیم از کاربران نیست.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- نقاط قوت و ضعف -->
+    <section class="op-section">
+        <h2>نقاط قوت و ضعف</h2>
+
+        <div class="op-panel op-pros">
+            <h3>✓ نقاط قوت</h3>
+
+            <p>✓ بازیگری درخشان کیلین مورفی</p>
+            <p>✓ کارگردانی قدرتمند</p>
+            <p>✓ موسیقی متن تأثیرگذار</p>
+            <p>✓ فیلم‌برداری حرفه‌ای</p>
+            <p>✓ فیلمنامه چندلایه</p>
+            <p>✓ طراحی صدای قوی</p>
+        </div>
+
+        <div class="op-panel op-cons">
+            <h3>• نکاتی که ممکن است برای بعضی مخاطبان جذاب نباشد</h3>
+
+            <p>• مدت زمان نسبتاً طولانی</p>
+            <p>• روایت پیچیده</p>
+            <p>• دیالوگ‌های فراوان</p>
+            <p>• نیاز به آشنایی با شخصیت‌های تاریخی</p>
+        </div>
+    </section>
+
+    <!-- جوایز -->
+    <section class="op-section">
+        <h2>جوایز و افتخارات</h2>
+
+        <div class="op-panel">
+
+            <h3>🏆 جوایز اسکار ۲۰۲۴</h3>
+
+            <div class="op-award">
+                بهترین فیلم
+                <span>🏆 برنده</span>
+            </div>
+
+            <div class="op-award">
+                بهترین کارگردانی
+                <span>🏆 کریستوفر نولان</span>
+            </div>
+
+            <div class="op-award">
+                بهترین بازیگر نقش اول مرد
+                <span>🏆 کیلین مورفی</span>
+            </div>
+
+            <div class="op-award">
+                بهترین بازیگر نقش مکمل مرد
+                <span>🏆 رابرت داونی جونیور</span>
+            </div>
+
+            <div class="op-award">
+                بهترین فیلم‌برداری
+                <span>🏆 برنده</span>
+            </div>
+
+            <div class="op-award">
+                بهترین موسیقی متن
+                <span>🏆 برنده</span>
+            </div>
+
+            <div class="op-award">
+                بهترین تدوین
+                <span>🏆 برنده</span>
+            </div>
+
+            <p>
+                این فیلم در مجموع ۷ جایزه از ۱۳ نامزدی اسکار
+                دریافت کرد.
+            </p>
+
+            <h3>سایر افتخارات</h3>
+
+            <ul class="op-list">
+                <li>۵ جایزه گلدن گلوب</li>
+                <li>۷ جایزه بفتا</li>
+                <li>جوایز متعدد انجمن‌های منتقدان</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- فروش -->
+    <section class="op-section">
+        <h2>فروش جهانی و موفقیت تجاری</h2>
+
+        <div class="op-facts">
+
+            <div class="op-fact">
+                <strong>بودجه تولید:</strong>
+                حدود ۱۰۰ میلیون دلار
+            </div>
+
+            <div class="op-fact">
+                <strong>فروش آمریکا و کانادا:</strong>
+                حدود ۳۳۰ میلیون دلار
+            </div>
+
+            <div class="op-fact">
+                <strong>فروش بین‌المللی:</strong>
+                حدود ۶۴۶ میلیون دلار
+            </div>
+
+            <div class="op-fact">
+                <strong>فروش جهانی:</strong>
+                حدود ۹۷۶ میلیون دلار
+            </div>
+
+        </div>
+
+        <p>
+            اوپنهایمر با وجود زمان طولانی و موضوع تاریخی خود،
+            به یکی از موفق‌ترین فیلم‌های سال ۲۰۲۳ از نظر فروش
+            تبدیل شد.
+        </p>
+    </section>
+
+    <!-- مناسب چه کسانی است -->
+    <section class="op-section">
+        <h2>آیا اوپنهایمر ارزش تماشا دارد؟</h2>
+
+        <div class="op-panel">
+
+            <p>
+                اگر به فیلم‌های تاریخی، زندگی‌نامه‌ای، آثار
+                کریستوفر نولان و داستان‌های فکری علاقه داری،
+                اوپنهایمر می‌تواند انتخاب بسیار خوبی باشد.
+            </p>
+
+            <p>
+                این فیلم بیشتر برای کسانی مناسب است که از
+                دنبال‌کردن شخصیت‌ها، گفت‌وگوها و موضوعات
+                تاریخی و اخلاقی لذت می‌برند.
+            </p>
+
+            <p>
+                اگر به دنبال اکشن سریع و اتفاقات پشت سر هم هستی،
+                ممکن است ریتم فیلم برایت کند باشد.
+            </p>
+
+        </div>
+    </section>
+    <!-- رده بندی -->
+    <section class="op-section">
+        <h2>رده‌بندی و محتوای فیلم</h2>
+
+        <div class="op-panel">
+
+            <p>
+                <strong>رده‌بندی آمریکا:</strong> R
+            </p>
+
+            <p>
+                فیلم دارای برخی محتوای بزرگسالانه، برهنگی،
+                زبان نامناسب و فضای روانی پرتنش است.
+            </p>
+
+            <p>
+                موضوعات جنگ، خشونت و پیامدهای انسانی آن
+                نیز در فیلم مطرح می‌شوند.
+            </p>
+
+            <p>
+                رده‌بندی سنی در کشورهای مختلف ممکن است متفاوت باشد.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- نظر CineWorld -->
+    <section class="op-section">
+        <h2>نظر اختصاصی CineWorld</h2>
+
+        <div class="op-verdict">
+
+            <h3>⭐️ امتیاز تحریریه CineWorld: ۹.۲ از ۱۰</h3>
+
+            <p>
+                اوپنهایمر نمونه‌ای از سینمایی است که تلاش می‌کند
+                فراتر از سرگرمی حرکت کند.
+            </p>
+
+            <p>
+                کریستوفر نولان با استفاده از بازیگری قدرتمند،
+                موسیقی تأثیرگذار و روایت چندلایه، داستان یکی از
+                مهم‌ترین شخصیت‌های علمی تاریخ را به تجربه‌ای
+                سینمایی تبدیل کرده است.
+            </p>
+
+            <p>
+                ارزش اصلی فیلم در پرداختن به رابطه میان علم،
+                قدرت، مسئولیت و پیامدهای تصمیم‌های انسانی است.
+            </p>
+
+            <p>
+                <strong>
+                    اوپنهایمر فیلمی است که پس از پایان آن،
+                    موضوعات زیادی برای فکرکردن باقی می‌گذارد.
+                </strong>
+            </p>
+
+        </div>
+    </section>
+
+    <!-- منابع -->
+    <section class="op-section op-sources">
+        <h2>منابع اطلاعات و امتیازها</h2>
+
+        <div class="op-panel">
+
+            <a href="https://www.imdb.com/title/tt15398776/"
+               target="_blank" rel="noopener">
+                IMDb – اطلاعات و امتیاز فیلم
+            </a>
+
+            <a href="https://www.rottentomatoes.com/m/oppenheimer_2023"
+               target="_blank" rel="noopener">
+                Rotten Tomatoes – نقد و امتیازها
+            </a>
+
+            <a href="https://www.metacritic.com/movie/oppenheimer/"
+               target="_blank" rel="noopener">
+                Metacritic – بررسی منتقدان
+            </a>
+
+            <a href="https://www.oppenheimermovie.com/"
+               target="_blank" rel="noopener">
+                وب‌سایت رسمی فیلم
+            </a>
+
+        </div>
+    </section>
+
+    <!-- بازگشت -->
+    <div style="text-align:center; margin-top:40px;">
+        <a href="index.html" class="back-btn">
+            بازگشت به صفحه اصلی CineWorld
+        </a>
+    </div>
+
+</main>
+
+</body>
+</html>

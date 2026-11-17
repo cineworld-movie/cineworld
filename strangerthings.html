@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things | CineWorld</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0f;
+            color: #eee;
+            font-family: Tahoma, sans-serif;
+            line-height: 2;
+        }
+
+        header {
+            background: #15151d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #292932;
+        }
+
+        .logo {
+            color: #ff3030;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3030;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1150px;
+            margin: 40px auto;
+        }
+
+        .hero {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+            background: #17171f;
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #292932;
+        }
+
+        .poster {
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px #0008;
+        }
+
+        .hero-info {
+            flex: 1;
+        }
+
+        h1 {
+            color: #ff3030;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #ff4545;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 20px;
+        }
+
+        .section {
+            background: #17171f;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 13px;
+            border: 1px solid #292932;
+        }
+
+        .spoiler-label {
+            display: inline-block;
+            background: #153b2b;
+            color: #65e69a;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .ratings {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .rating-card {
+            background: #22222c;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .rating-card strong {
+            display: block;
+            font-size: 25px;
+            color: #ffc107;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .cast-card {
+            background: #22222c;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .cast-card strong {
+            color: #ff5555;
+        }
+
+        .season-list {
+            padding-right: 22px;
+        }
+
+        .season-list li {
+            margin-bottom: 9px;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .pros, .cons {
+            background: #22222c;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .pros h3 {
+            color: #63d68b;
+        }
+
+        .cons h3 {
+            color: #ff7777;
+        }
+
+        .editor-score {
+            color: #ffc107;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        </section>
+
+    <!-- نظر منتقدان -->
+    <section class="section">
+
+        <h2>📝 نظر منتقدان و تماشاگران</h2>
+
+        <p>
+            منتقدان معمولاً ترکیب ژانرهای مختلف، بازی بازیگران،
+            فضاسازی دهه ۱۹۸۰ و شخصیت‌پردازی سریال را از
+            مهم‌ترین ویژگی‌های آن می‌دانند.
+        </p>
+
+        <p>
+            بسیاری از تماشاگران نیز ارتباط میان شخصیت‌ها،
+            موسیقی و فضای رازآلود داستان را از دلایل محبوبیت
+            این مجموعه معرفی می‌کنند.
+        </p>
+
+    </section>
+
+    <!-- نقد CineWorld -->
+    <section class="section">
+
+        <h2>🔥 نقد و بررسی اختصاصی CineWorld</h2>
+
+        <p>
+            Stranger Things از آن سریال‌هایی است که به‌خوبی
+            می‌تواند مخاطب را وارد دنیای خودش کند.
+            ترکیب معما، ماجراجویی، دوستی و عناصر علمی‌تخیلی
+            باعث شده این مجموعه هویت متفاوتی داشته باشد.
+        </p>
+
+        <p>
+            یکی از مهم‌ترین نقاط قوت سریال، شخصیت‌هایی هستند
+            که در طول داستان رشد می‌کنند و ارتباط میان آن‌ها
+            به بخش مهمی از جذابیت مجموعه تبدیل می‌شود.
+        </p>
+
+        <p class="editor-score">
+            امتیاز تحریریه CineWorld: 9/10
+        </p>
+
+        <p>
+            انتخاب تحریریه: یکی از محبوب‌ترین سریال‌های
+            علمی‌تخیلی و معمایی نتفلیکس
+        </p>
+
+    </section>
+
+    <!-- هشدار محتوا -->
+    <section class="section">
+
+        <h2>⚠️ رده‌بندی محتوایی</h2>
+
+        <p>
+            این سریال دارای فضای ترسناک، موجودات خیالی،
+            صحنه‌های خشونت‌آمیز و برخی موضوعات سنگین است.
+            رده‌بندی رسمی آن TV-14 است؛ بنابراین بهتر است
+            مخاطبان به رده‌بندی سنی و حساسیت‌های خود توجه کنند.
+        </p>
+
+    </section>
+
+    <!-- منابع -->
+    <section class="section">
+
+        <h2>🔗 منابع و اطلاعات بیشتر</h2>
+
+        <div class="source-links">
+
+            <a href="https://www.imdb.com/title/tt4574334/"
+               target="_blank">IMDb</a>
+
+            <a href="https://www.rottentomatoes.com/tv/stranger_things"
+               target="_blank">Rotten Tomatoes</a>
+
+            <a href="https://www.metacritic.com/tv/stranger-things/"
+               target="_blank">Metacritic</a>
+
+            <a href="https://www.netflix.com/title/80057281"
+               target="_blank">Netflix</a>
+
+        </div>
+
+    </section>
+
+    <a class="back-btn" href="index.html">
+        بازگشت به صفحه اصلی
+    </a>
+
+</main>
+
+<footer>
+    CineWorld | دنیای فیلم و سریال
+</footer>
+
+</body>
+</html>
+.back-btn {
+            display: inline-block;
+            background: #ff3030;
+            color: white;
+            text-decoration: none;
+            padding: 11px 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #d51f1f;
+        }
+
+        .source-links a {
+            color: #ff6666;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .source-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 25px;
+            margin-top: 30px;
+            background: #15151d;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .poster {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .ratings {
+                grid-template-columns: 1fr;
+            }
+
+            .cast-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .facts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CineWorld</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#movies">فیلم‌ها</a>
+        <a href="index.html#series">سریال‌ها</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- معرفی سریال -->
+    <section class="hero">
+
+        <img
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
+            alt="پوستر سریال Stranger Things"
+        >
+
+        <div class="hero-info">
+
+            <h1>Stranger Things | چیزهای عجیب</h1>
+
+            <p>
+                Stranger Things یک سریال علمی‌تخیلی، معمایی و
+                ماجراجویانه آمریکایی است که با فضای خاص دهه ۱۹۸۰،
+                شخصیت‌های دوست‌داشتنی و داستانی پررمزوراز،
+                به یکی از آثار محبوب نتفلیکس تبدیل شده است.
+            </p>
+
+            <div class="rating">⭐️ امتیاز IMDb: حدود 8.6/10</div>
+
+            <div class="facts">
+                <p>📅 سال انتشار: 2016 تا 2025</p>
+                <p>🎬 خالقان: برادران دافر</p>
+                <p>📺 تعداد فصل‌ها: 5 فصل</p>
+                <p>🎞️ تعداد قسمت‌ها: 42 قسمت</p>
+                <p>🌍 کشور: ایالات متحده آمریکا</p>
+                <p>📡 شبکه پخش: Netflix</p>
+                <p>🎭 ژانر: علمی‌تخیلی، معمایی، درام</p>
+                <p>🏁 وضعیت: پایان‌یافته</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- داستان بدون اسپویل -->
+    <section class="section">
+
+        <h2>📖 داستان سریال</h2>
+
+        <div class="spoiler-label">
+            ✓ معرفی کاملاً بدون اسپویل
+        </div>
+
+        <p>
+            داستان در شهری کوچک به نام هاوکینز در دهه ۱۹۸۰ اتفاق
+            می‌افتد. پس از ناپدید شدن مرموز یک پسربچه،
+            دوستان و خانواده او تلاش می‌کنند راز این اتفاق را
+            کشف کنند.
+        </p>
+
+        <p>
+            در جریان جست‌وجو، آن‌ها با دختری عجیب و اتفاقاتی
+            روبه‌رو می‌شوند که نگاهشان به دنیای اطراف را تغییر
+            می‌دهد. از اینجا ماجرایی پر از راز، دوستی،
+            هیجان و اتفاقات غیرمنتظره آغاز می‌شود.
+        </p>
+
+        <p>
+            این معرفی هیچ‌کدام از اتفاقات مهم، سرنوشت شخصیت‌ها
+            یا پایان سریال را فاش نمی‌کند.
+        </p>
+
+    </section>
+
+    <!-- امتیازها -->
+    <section class="section">
+
+        <h2>⭐️ امتیازها و نمرات جهانی</h2>
+
+        <div class="ratings">
+
+            <div class="rating-card">
+                <strong>8.6/10</strong>
+                IMDb
+            </div>
+
+            <div class="rating-card">
+                <strong>90%</strong>
+                Rotten Tomatoes
+            </div>
+            <div class="rating-card">
+                <strong>74/100</strong>
+                Metacritic
+            </div>
+
+        </div>
+
+        <p>
+            این امتیازها مربوط به ارزیابی کلی سریال هستند.
+            نمرات ممکن است با گذشت زمان تغییر کنند.
+        </p>
+
+    </section>
+
+    <!-- بازیگران -->
+    <section class="section">
+
+        <h2>🎭 بازیگران و شخصیت‌های اصلی</h2>
+
+        <div class="cast-grid">
+
+            <div class="cast-card">
+                <strong>Millie Bobby Brown</strong>
+                <p>الون (Eleven)</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Finn Wolfhard</strong>
+                <p>مایک ویلر</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>David Harbour</strong>
+                <p>جیم هاپر</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Winona Ryder</strong>
+                <p>جویس بایرز</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Gaten Matarazzo</strong>
+                <p>داستین هندرسون</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Caleb McLaughlin</strong>
+                <p>لوکاس سینکلر</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Noah Schnapp</strong>
+                <p>ویل بایرز</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Sadie Sink</strong>
+                <p>مکس میفیلد</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Joe Keery</strong>
+                <p>استیو هرینگتون</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- فصل ها -->
+    <section class="section">
+
+        <h2>📺 اطلاعات فصل‌ها</h2>
+
+        <ul class="season-list">
+            <li>فصل اول: 8 قسمت - سال 2016</li>
+            <li>فصل دوم: 9 قسمت - سال 2017</li>
+            <li>فصل سوم: 8 قسمت - سال 2019</li>
+            <li>فصل چهارم: 9 قسمت - سال 2022</li>
+            <li>فصل پنجم: 8 قسمت - سال 2025</li>
+        </ul>
+
+        <p>
+            این مجموعه در مجموع 42 قسمت دارد و فصل پنجم،
+            پایان داستان اصلی Stranger Things است.
+        </p>
+
+    </section>
+
+    <!-- جوایز -->
+    <section class="section">
+
+        <h2>🏆 جوایز و افتخارات</h2>
+
+        <ul>
+            <li>دریافت جوایز متعدد Primetime Emmy</li>
+            <li>نامزدی و دریافت جوایز مهم تلویزیونی</li>
+            <li>تحسین طراحی صحنه و جلوه‌های ویژه</li>
+            <li>توجه گسترده مخاطبان در سراسر جهان</li>
+        </ul>
+
+        <p>
+            بازی بازیگران، طراحی فضای دهه ۱۹۸۰ و جلوه‌های بصری
+            از بخش‌هایی هستند که بارها مورد توجه منتقدان قرار گرفته‌اند.
+        </p>
+
+    </section>
+
+    <!-- موسیقی و فضاسازی -->
+    <section class="section">
+
+        <h2>🎵 موسیقی و فضای سریال</h2>
+
+        <p>
+            موسیقی متن سریال توسط Kyle Dixon و Michael Stein
+            ساخته شده است. موسیقی الکترونیک و حال‌وهوای
+            دهه ۱۹۸۰ نقش مهمی در ایجاد فضای مرموز و خاص سریال دارند.
+        </p>
+
+        <p>
+            استفاده از نورپردازی، رنگ‌ها، لباس‌ها و طراحی محیط
+            باعث شده Stranger Things هویت بصری مشخصی داشته باشد.
+        </p>
+
+    </section>
+
+    <!-- نقاط قوت و ضعف -->
+    <section class="section">
+
+        <h2>🔍 نقاط قوت و ضعف</h2>
+
+        <div class="pros-cons">
+
+            <div class="pros">
+                <h3>نقاط قوت</h3>
+                <ul>
+                    <li>داستان معمایی و جذاب</li>
+                    <li>شخصیت‌های به‌یادماندنی</li>
+                    <li>موسیقی و فضاسازی عالی</li>
+                    <li>جلوه‌های ویژه چشم‌نواز</li>
+                    <li>ترکیب دوستی، ماجراجویی و هیجان</li>
+                </ul>
+            </div>
+
+            <div class="cons">
+                <h3>نکات قابل توجه</h3>
+                <ul>
+                    <li>بعضی قسمت‌ها ریتم آرام‌تری دارند.</li>
+                    <li>فصل‌های پایانی طولانی‌تر هستند.</li>
+                    <li>فضای ترسناک و صحنه‌های خشونت‌آمیز دارد.</li>
+                </ul>
+            </div>
+
+        </div>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | CineWorld</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0f;
+            color: white;
+            font-family: Tahoma, sans-serif;
+            line-height: 1.9;
+        }
+
+        header {
+            background: #15151d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ff3030;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            color: #ff3030;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .hero {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+            background: #17171f;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .poster {
+            width: 280px;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            color: #ff3030;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 19px;
+        }
+
+        .section {
+            background: #17171f;
+            padding: 22px;
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #ff3030;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        .back-btn:hover {
+            background: #d91f1f;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .poster {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CineWorld</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#movies">فیلم‌ها</a>
+        <a href="index.html#series">سریال‌ها</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <section class="hero">
+
+        <img
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+            alt="پوستر انیمیشن Your Name"
+        >
+
+        <div>
+            <h1>Your Name | نام تو</h1>
+
+            <p>
+                Your Name یکی از انیمیشن‌های تحسین‌شده ژاپنی است
+                که با داستان متفاوت، موسیقی زیبا و تصاویر چشم‌نواز
+                توانسته توجه تماشاگران زیادی را جلب کند.
+            </p>
+
+            <div class="rating">⭐️ امتیاز IMDb: 8.4/10</div>
+
+            <p>📅 سال انتشار: 2016</p>
+            <p>⏱️ مدت زمان: 106 دقیقه</p>
+            <p>🌍 کشور سازنده: ژاپن</p>
+            <p>🎬 کارگردان: ماکوتو شینکای</p>
+            <p>🎭 ژانر: انیمیشن، فانتزی، درام، عاشقانه</p>
+        </div>
+
+    </section>
+
+    <section class="section">
+        <h2>📖 داستان فیلم</h2>
+
+        <p>
+            داستان درباره دو نوجوان به نام‌های تاکی و میتسوها است
+            که در دو شهر متفاوت زندگی می‌کنند. آن‌ها به شکل عجیبی
+            متوجه می‌شوند که گاهی جای یکدیگر را تجربه می‌کنند.
+            این اتفاق آغاز ماجرایی رازآلود و احساسی می‌شود.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>🎭 شخصیت‌های اصلی</h2>
+
+        <p><strong>تاکی تاچیبانا:</strong> نوجوانی که در توکیو زندگی می‌کند.</p>
+        <p><strong>میتسوها میامیزو:</strong> دختری که در شهری کوچک زندگی می‌کند.</p>
+    </section>
+
+    <section class="section">
+        <h2>🎵 موسیقی و جلوه‌های بصری</h2>
+
+        <p>
+            موسیقی گروه RADWIMPS یکی از نقاط قوت این انیمیشن است.
+            طراحی شهرها، آسمان و مناظر طبیعی نیز از زیباترین
+            بخش‌های بصری فیلم به شمار می‌رود.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>🏆 جوایز و افتخارات</h2>
+
+        <ul>
+            <li>برنده جایزه بهترین انیمیشن در جشنواره فیلم لس‌آنجلس 2016</li>
+            <li>برنده جایزه بهترین فیلم انیمیشن در جشنواره فیلم Sitges</li>
+            <li>یکی از موفق‌ترین انیمیشن‌های ژاپنی از نظر فروش جهانی</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>⭐️ نظر CineWorld</h2>
+
+        <p>
+            Your Name ترکیبی از داستانی متفاوت، موسیقی شنیدنی
+            و تصاویر فوق‌العاده زیباست. این انیمیشن می‌تواند
+            تجربه‌ای به‌یادماندنی برای علاقه‌مندان به آثار احساسی
+            و فانتزی باشد.
+        </p>
+
+        <div class="rating">امتیاز تحریریه CineWorld: 9/10</div>
+    </section>
+
+    <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
+
+</div>
+
+<footer>
+    CineWorld | دنیای فیلم و سریال
+</footer>
+
+</body>
+</html>

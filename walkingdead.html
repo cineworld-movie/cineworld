@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Walking Dead | CineWorld</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0f;
+            color: #f5f5f5;
+            font-family: Tahoma, sans-serif;
+            line-height: 2;
+        }
+
+        header {
+            background: #15151d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            color: #ff3030;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #ff3030;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .movie-details {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+            background: #15151d;
+            padding: 25px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+
+        .poster {
+            width: 280px;
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .movie-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        h1 {
+            color: #ff3030;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #ff4545;
+            margin-top: 35px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #342020;
+            color: #ff7777;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #ffd166;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .fact {
+            background: #22222d;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
+
+        .section {
+            background: #15151d;
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 22px;
+        }
+
+        .section p {
+            color: #d0d0d0;
+        }
+
+        ul {
+            padding-right: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #d0d0d0;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 12px;
+        }
+
+        .cast-item {
+            background: #22222d;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .cast-item strong {
+            color: #ff7777;
+        }
+
+        .pros li::marker {
+            color: #55d98b;
+        }
+
+        .cons li::marker {
+            color: #ff6666;
+        }
+
+        .warning {
+            border-right: 4px solid #ff4545;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #ff3030;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        .back-btn:hover {
+            background: #d91f1f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .movie-details {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .poster {
+                width: 230px;
+            }
+
+            header {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>CineWorld</h2>
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#movies">فیلم‌ها</a>
+        <a href="index.html#series">سریال‌ها</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="movie-details">
+
+        <img
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500/reKs8y4mPwPkZG99ZpbKRhBPKsX.jpg"
+            alt="پوستر سریال مردگان متحرک"
+        >
+
+        <div class="movie-info">
+
+            <span class="tag">معرفی کاملاً بدون اسپویل</span>
+
+            <h1>The Walking Dead</h1>
+
+            <h3>مردگان متحرک</h3>
+
+            <p class="rating">⭐️ امتیاز IMDb: 8.1 از 10</p>
+
+            <p>
+                یکی از مشهورترین سریال‌های ژانر آخرالزمانی و بقا
+                که داستان گروهی از انسان‌ها را در دنیایی متفاوت روایت می‌کند.
+            </p>
+
+            <div class="facts">
+                <div class="fact">📅 سال پخش: 2010 تا 2022</div>
+                <div class="fact">🎬 ژانر: درام، ترسناک، هیجان‌انگیز</div>
+                <div class="fact">📺 تعداد فصل: 11</div>
+                <div class="fact">🎞️ تعداد قسمت: 177</div>
+                <div class="fact">🏢 شبکه: AMC</div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>داستان سریال</h2>
+
+        <p>
+            داستان از جایی آغاز می‌شود که جهان با بحرانی عجیب و گسترده روبه‌رو شده
+            و زندگی انسان‌ها برای همیشه تغییر می‌کند.
+            ریک گرایمز، یک افسر پلیس، پس از بیدار شدن از یک دوره بیهوشی،
+            خود را در دنیایی ناشناخته می‌بیند.
+        </p>
+
+        <p>
+            او برای پیدا کردن خانواده‌اش و زنده ماندن در شرایط جدید،
+            وارد مسیری دشوار می‌شود. در این مسیر، انسان‌های مختلفی
+            با شخصیت‌ها، عقاید و تصمیم‌های متفاوت با او همراه می‌شوند.
+        </p>
+
+        <p>
+            سریال بیشتر از آنکه فقط درباره بقا باشد،
+            درباره اعتماد، خانواده، رهبری و تصمیم‌های سخت انسان‌هاست.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>اطلاعات تولید</h2>
+
+        <ul>
+            <li><strong>خالق نسخه تلویزیونی:</strong> Frank Darabont</li>
+            <li><strong>شبکه پخش:</strong> AMC</li>
+            <li><strong>کشور سازنده:</strong> آمریکا</li>
+            <li><strong>زبان اصلی:</strong> انگلیسی</li>
+            <li><strong>بر اساس:</strong> مجموعه کمیک The Walking Dead</li>
+            <li><strong>سال آغاز پخش:</strong> 2010</li>
+            <li><strong>سال پایان پخش:</strong> 2022</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>بازیگران اصلی</h2>
+
+        <div class="cast-grid">
+
+            <div class="cast-item">
+                <strong>Andrew Lincoln</strong>
+                <br>در نقش Rick Grimes
+            </div>
+
+            <div class="cast-item">
+                <strong>Norman Reedus</strong>
+                <br>در نقش Daryl Dixon
+            </div>
+
+            <div class="cast-item">
+                <strong>Danai Gurira</strong>
+                <br>در نقش Michonne
+            </div>
+
+            <div class="cast-item">
+                <strong>Melissa McBride</strong>
+                <br>در نقش Carol Peletier
+            </div>
+
+            <div class="cast-item">
+                <strong>Steven Yeun</strong>
+                <br>در نقش Glenn Rhee
+            </div>
+
+            <div class="cast-item">
+                <strong>Lauren Cohan</strong>
+                <br>در نقش Maggie Greene
+            </div>
+
+            <div class="cast-item">
+                <strong>Jeffrey Dean Morgan</strong>
+                <br>در نقش Negan
+            </div>
+
+            <div class="cast-item">
+                <strong>Chandler Riggs</strong>
+                <br>در نقش Carl Grimes
+            </div>
+
+            <div class="cast-item">
+                <strong>Scott Wilson</strong>
+                <br>در نقش Hershel Greene
+            </div>
+
+            <div class="cast-item">
+                <strong>Lennie James</strong>
+                <br>در نقش Morgan Jones
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>فصل‌های سریال</h2>
+        <ul>
+            <li>فصل اول: 6 قسمت</li>
+            <li>فصل دوم: 13 قسمت</li>
+            <li>فصل سوم: 16 قسمت</li>
+            <li>فصل چهارم: 16 قسمت</li>
+            <li>فصل پنجم: 16 قسمت</li>
+            <li>فصل ششم: 16 قسمت</li>
+            <li>فصل هفتم: 16 قسمت</li>
+            <li>فصل هشتم: 16 قسمت</li>
+            <li>فصل نهم: 16 قسمت</li>
+            <li>فصل دهم: 22 قسمت</li>
+            <li>فصل یازدهم: 24 قسمت</li>
+        </ul>
+
+        <p>
+            این سریال در مجموع 11 فصل و 177 قسمت دارد.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>نقاط قوت سریال</h2>
+
+        <ul class="pros">
+            <li>شخصیت‌پردازی و روابط پیچیده میان شخصیت‌ها</li>
+            <li>فضاسازی جذاب و دنیاسازی گسترده</li>
+            <li>موسیقی متن تأثیرگذار</li>
+            <li>لحظات هیجان‌انگیز و غیرقابل پیش‌بینی</li>
+            <li>پرداختن به موضوعات انسانی و اخلاقی</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>نکاتی که ممکن است برای بعضی مخاطبان منفی باشد</h2>
+
+        <ul class="cons">
+            <li>ریتم داستان در برخی فصل‌ها کند می‌شود.</li>
+            <li>تعداد زیاد قسمت‌ها ممکن است برای بعضی مخاطبان خسته‌کننده باشد.</li>
+            <li>برخی داستان‌های فرعی زمان زیادی به خود اختصاص می‌دهند.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>نظر CineWorld</h2>
+
+        <p>
+            The Walking Dead یکی از آثار شاخص تلویزیون در ژانر آخرالزمانی است.
+            چیزی که آن را متمایز می‌کند، فقط فضای ترسناک و هیجان‌انگیز آن نیست؛
+            بلکه روابط انسانی، تغییر شخصیت‌ها و انتخاب‌های دشوار آن‌هاست.
+        </p>
+
+        <p>
+            اگر به داستان‌های طولانی، شخصیت‌های به‌یادماندنی و فضای بقا علاقه دارید،
+            این سریال از آثار قابل توجه این ژانر به شمار می‌رود.
+        </p>
+
+        <p class="rating">امتیاز CineWorld: 9 از 10</p>
+    </section>
+
+    <section class="section warning">
+        <h2>هشدار محتوایی</h2>
+
+        <p>
+            این سریال دارای فضای ترسناک، خشونت، صحنه‌های دلهره‌آور
+            و موضوعات سنگین است و برای مخاطبان بزرگسال ساخته شده است.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>منابع اطلاعات</h2>
+
+        <ul>
+            <li>IMDb</li>
+            <li>AMC</li>
+            <li>The Movie Database (TMDB)</li>
+        </ul>
+    </section>
+
+    <a href="index.html" class="back-btn">بازگشت به صفحه اصلی</a>
+
+</main>
+
+<footer>
+    <p>© CineWorld | دنیای فیلم و سریال</p>
+</footer>
+
+</body>
+</html>

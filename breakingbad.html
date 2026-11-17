@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad | CineWorld</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0f;
+            color: #eee;
+            font-family: Tahoma, sans-serif;
+            line-height: 2;
+        }
+
+        header {
+            background: #15151d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #292932;
+        }
+
+        .logo {
+            color: #ff3030;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3030;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1150px;
+            margin: 40px auto;
+        }
+
+        .hero {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+            background: #17171f;
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #292932;
+        }
+
+        .poster {
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px #0008;
+        }
+
+        .hero-info {
+            flex: 1;
+        }
+
+        h1 {
+            color: #ff3030;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #ff4545;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 20px;
+        }
+
+        .section {
+            background: #17171f;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 13px;
+            border: 1px solid #292932;
+        }
+
+        .spoiler-label {
+            display: inline-block;
+            background: #153b2b;
+            color: #65e69a;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .ratings {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .rating-card {
+            background: #22222c;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .rating-card strong {
+            display: block;
+            font-size: 25px;
+            color: #ffc107;
+        }
+
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .cast-card {
+            background: #22222c;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .cast-card strong {
+            color: #ff5555;
+        }
+
+        .season-list {
+            padding-right: 22px;
+        }
+
+        .season-list li {
+            margin-bottom: 9px;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .pros, .cons {
+            background: #22222c;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .pros h3 {
+            color: #63d68b;
+        }
+
+        .cons h3 {
+            color: #ff7777;
+        }
+
+        .editor-score {
+            color: #ffc107;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #ff3030;
+            color: white;
+            text-decoration: none;
+            padding: 11px 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #d51f1f;
+        }
+
+        .source-links a {
+            color: #ff6666;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .source-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 25px;
+            margin-top: 30px;
+            background: #15151d;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .poster {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .ratings {
+                grid-template-columns: 1fr;
+            }
+
+            .cast-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .facts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CineWorld</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="index.html#movies">فیلم‌ها</a>
+        <a href="index.html#series">سریال‌ها</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- معرفی سریال -->
+    <section class="hero">
+
+        <img
+            class="poster"
+            src="https://image.tmdb.org/t/p/w500/3xnWaLQjelJDDF7LT1WBo6f4BRe.jpg"
+            alt="پوستر سریال Breaking Bad"
+        >
+
+        <div class="hero-info">
+
+            <h1>Breaking Bad | بریکینگ بد</h1>
+
+            <p>
+                بریکینگ بد یک سریال جنایی و درام آمریکایی است
+                که داستان تغییرات زندگی یک معلم شیمی را روایت می‌کند.
+                اثری با شخصیت‌پردازی عمیق، داستان‌نویسی قدرتمند
+                و یکی از به‌یادماندنی‌ترین بازی‌های تاریخ تلویزیون.
+            </p>
+
+            <div class="rating">⭐️ امتیاز IMDb: 9.5/10</div>
+
+            <div class="facts">
+                <p>📅 سال انتشار: 2008 تا 2013</p>
+                <p>🎬 خالق: وینس گیلیگان</p>
+                <p>📺 تعداد فصل‌ها: 5 فصل</p>
+                <p>🎞️ تعداد قسمت‌ها: 62 قسمت</p>
+                <p>⏱️ مدت هر قسمت: حدود 48 تا 49 دقیقه</p>
+                <p>🌍 کشور: ایالات متحده آمریکا</p>
+                <p>🎭 ژانر: جنایی، درام، هیجان‌انگیز</p>
+                <p>📡 شبکه اصلی: AMC</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- داستان بدون اسپویل -->
+    <section class="section">
+
+        <h2>📖 داستان سریال</h2>
+
+        <div class="spoiler-label">
+            ✓ معرفی کاملاً بدون اسپویل
+        </div>
+
+        <p>
+            والتر وایت، معلم شیمی دبیرستان، مردی معمولی است که
+            زندگی‌اش با یک خبر غیرمنتظره دستخوش تغییر می‌شود.
+            او در شرایط دشواری قرار می‌گیرد و تصمیم‌هایی می‌گیرد
+            که مسیر زندگی خودش و اطرافیانش را تغییر می‌دهند.
+        </p>
+
+        <p>
+            بریکینگ بد داستانی درباره انتخاب‌ها، قدرت، خانواده،
+            جاه‌طلبی و پیامدهای تصمیم‌های انسان است.
+            جذابیت اصلی سریال در تحول شخصیت‌ها و اتفاقاتی است
+            که به‌تدریج داستان را پیچیده‌تر می‌کنند.
+        </p>
+
+        <p>
+            این معرفی هیچ‌کدام از اتفاقات مهم یا پایان داستان
+            را فاش نمی‌کند.
+        </p>
+
+    </section>
+
+    <!-- امتیازها -->
+    <section class="section">
+
+        <h2>⭐️ امتیازها و نمرات جهانی</h2>
+
+        <div class="ratings">
+
+            <div class="rating-card">
+                <strong>9.5/10</strong>
+                IMDb
+            </div>
+
+            <div class="rating-card">
+                <strong>96%</strong>
+                Rotten Tomatoes
+            </div>
+            <div class="rating-card">
+                <strong>87/100</strong>
+                Metacritic
+            </div>
+
+        </div>
+
+        <p>
+            این امتیازها نشان‌دهنده استقبال گسترده منتقدان
+            و تماشاگران از سریال هستند. نمره‌ها ممکن است
+            در آینده تغییر کنند.
+        </p>
+
+    </section>
+
+    <!-- بازیگران -->
+    <section class="section">
+
+        <h2>🎭 بازیگران و شخصیت‌های اصلی</h2>
+
+        <div class="cast-grid">
+
+            <div class="cast-card">
+                <strong>Bryan Cranston</strong>
+                <p>والتر وایت</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Aaron Paul</strong>
+                <p>جسی پینکمن</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Anna Gunn</strong>
+                <p>اسکایلر وایت</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Dean Norris</strong>
+                <p>هنک شرادر</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Bob Odenkirk</strong>
+                <p>سال گودمن</p>
+            </div>
+
+            <div class="cast-card">
+                <strong>Giancarlo Esposito</strong>
+                <p>گاس فرینگ</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- فصل‌ها -->
+    <section class="section">
+
+        <h2>📺 اطلاعات فصل‌ها</h2>
+
+        <ul class="season-list">
+            <li>فصل اول: 7 قسمت - سال 2008</li>
+            <li>فصل دوم: 13 قسمت - سال 2009</li>
+            <li>فصل سوم: 13 قسمت - سال 2010</li>
+            <li>فصل چهارم: 13 قسمت - سال 2011</li>
+            <li>فصل پنجم: 16 قسمت - سال‌های 2012 و 2013</li>
+        </ul>
+
+        <p>
+            مجموعاً 62 قسمت در پنج فصل ساخته شده و داستان
+            سریال به پایان رسیده است.
+        </p>
+
+    </section>
+
+    <!-- جوایز -->
+    <section class="section">
+
+        <h2>🏆 جوایز و افتخارات</h2>
+
+        <ul>
+            <li>برنده 16 جایزه Primetime Emmy</li>
+            <li>برنده 2 جایزه Golden Globe</li>
+            <li>دریافت جوایز متعدد برای بازیگری و نویسندگی</li>
+            <li>تحسین گسترده منتقدان در سراسر جهان</li>
+        </ul>
+
+        <p>
+            برایان کرانستون و آرون پال نیز به‌خاطر بازی در این
+            مجموعه جوایز مهمی دریافت کردند.
+        </p>
+
+    </section>
+
+    <!-- کارگردانی و موسیقی -->
+    <section class="section">
+
+        <h2>🎬 کارگردانی و ساخت</h2>
+
+        <p>
+            خالق سریال وینس گیلیگان است. یکی از ویژگی‌های مهم
+            کار او توجه به جزئیات، روایت تدریجی داستان و تحول
+            شخصیت‌هاست.
+        </p>
+
+        <p>
+            فیلم‌برداری، استفاده از رنگ‌ها، قاب‌بندی‌های خاص
+            و فضاسازی متفاوت از ویژگی‌هایی هستند که هویت بصری
+            بریکینگ بد را شکل داده‌اند.
+        </p>
+
+        <h2>🎵 موسیقی متن</h2>
+
+        <p>
+            موسیقی متن این سریال توسط دیو پورتر ساخته شده است.
+            موسیقی و انتخاب قطعات مختلف، نقش مهمی در ایجاد
+            فضای خاص و هیجان داستان دارند.
+        </p>
+
+    </section>
+
+    <!-- نقاط قوت و ضعف -->
+    <section class="section">
+
+        <h2>🔍 نقاط قوت و ضعف</h2>
+
+        <div class="pros-cons">
+
+            <div class="pros">
+                <h3>نقاط قوت</h3>
+                <ul>
+                    <li>داستان‌نویسی بسیار قوی</li>
+                    <li>شخصیت‌پردازی عمیق و ماندگار</li>
+                    <li>بازی فوق‌العاده بازیگران</li>
+                    <li>کارگردانی و فیلم‌برداری حرفه‌ای</li>
+                    <li>پایان‌بندی تحسین‌شده</li>
+                </ul>
+            </div>
+
+            <div class="cons">
+                <h3>نکات قابل توجه</h3>
+                <ul>
+                    <li>ریتم بعضی قسمت‌ها نسبتاً آرام است.</li>
+                    <li>فضای داستان در بخش‌هایی سنگین و تاریک است.</li>
+                    <li>موضوعات بزرگسالانه و صحنه‌های خشونت‌آمیز دارد.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- نظر منتقدان -->
+    <section class="section">
+
+        <h2>📝 نظر منتقدان و تماشاگران</h2>
+        <p>
+            منتقدان معمولاً بازی برایان کرانستون، فیلمنامه،
+            تحول شخصیت‌ها و کیفیت کارگردانی را از مهم‌ترین
+            دلایل موفقیت سریال می‌دانند.
+        </p>
+
+        <p>
+            بسیاری از تماشاگران نیز معتقدند داستان سریال
+            به‌خوبی پیش می‌رود و هر فصل به شخصیت‌ها و اتفاقات
+            عمق بیشتری می‌دهد.
+        </p>
+
+    </section>
+
+    <!-- نقد اختصاصی -->
+    <section class="section">
+
+        <h2>🔥 نقد و بررسی اختصاصی CineWorld</h2>
+
+        <p>
+            بریکینگ بد فقط یک سریال جنایی نیست؛ بلکه اثری درباره
+            تغییر شخصیت انسان و تأثیر انتخاب‌های اوست.
+            چیزی که این مجموعه را متمایز می‌کند، داستان‌گویی
+            حساب‌شده، بازی‌های ماندگار و توجه به کوچک‌ترین
+            جزئیات است.
+        </p>
+
+        <p>
+            از ابتدا تا انتها، سریال تلاش می‌کند مخاطب را
+            با شخصیت‌هایش همراه کند و به او نشان دهد که
+            تصمیم‌های انسان می‌توانند چه پیامدهایی داشته باشند.
+        </p>
+
+        <p class="editor-score">
+            امتیاز تحریریه CineWorld: 10/10
+        </p>
+
+        <p>
+            انتخاب تحریریه: یکی از بهترین سریال‌های تاریخ تلویزیون
+        </p>
+
+    </section>
+
+    <!-- هشدار محتوا -->
+    <section class="section">
+
+        <h2>⚠️ رده‌بندی محتوایی</h2>
+
+        <p>
+            این سریال دارای رده‌بندی بزرگسالانه TV-MA است
+            و موضوعاتی مانند جرم، مصرف مواد، خشونت و زبان نامناسب
+            را در بر می‌گیرد. برای مخاطبان کم‌سن مناسب نیست.
+        </p>
+
+    </section>
+
+    <!-- منابع -->
+    <section class="section">
+
+        <h2>🔗 منابع و اطلاعات بیشتر</h2>
+
+        <div class="source-links">
+            <a href="https://www.imdb.com/title/tt0903747/"
+               target="_blank">IMDb</a>
+
+            <a href="https://www.rottentomatoes.com/tv/breaking_bad"
+               target="_blank">Rotten Tomatoes</a>
+
+            <a href="https://www.metacritic.com/tv/breaking-bad/"
+               target="_blank">Metacritic</a>
+        </div>
+
+    </section>
+
+    <a class="back-btn" href="index.html">
+        بازگشت به صفحه اصلی
+    </a>
+
+</main>
+
+<footer>
+    CineWorld | دنیای فیلم و سریال
+</footer>
+
+</body>
+</html>
